@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sterling Community School Internal Streaming Service.">
+    <meta name="author" content="SCS IT Department">
+    <meta property="og:title" content="SCS Stream: Internal Streaming Service" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://play.scs.sterlingschool.org/" />
+    <meta property="og:image" content="https://play.scs.sterlingschool.org/favicon/android-chrome-512x512.png" />
+    <meta property="og:description" content="Sterling Community School Internal Streaming Service." />
+    <meta name="theme-color" content="#FF0000">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Stream 3 - SCS Stream</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS for the '3 Col Portfolio' Template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+      
+   <link href="https://unpkg.com/video.js@7.5.4/dist/video-js.css" rel="stylesheet">
+   <script src="https://unpkg.com/video.js@7.5.4/dist/video.js"></script>
+   <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
+   <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">SCS Stream</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index">Home</a></li>
+            <li><a href="stream1">Stream 1</a></li>
+            <li><a href="stream2">Stream 2</a></li>
+            <li><a href="stream3">Stream 3</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+          <h1 class="page-header">Stream 3  <small>This webpage is only accessible in the building.</small></h1>
+        </div>
+
+      </div>
+<center>
+        <h4>Stream Unavailable. Please check back later.</h4>
+</center>
+        
+    </div><!-- /.container -->
+
+    <div class="container">
+
+      <hr>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Sterling Public Schools <span id="getCurrentDate"></span></p>
+          </div>
+        </div>
+      </footer>
+      
+    </div><!-- /.container -->
+
+<script>
+    var options, player;
+
+options = {
+   controlBar: {
+      children: [
+         'playToggle',
+         'progressControl',
+         'volumePanel',
+         'qualitySelector',
+         'fullscreenToggle',
+      ],
+   },
+};
+    
+      videojs('stream1', {}, function() {
+         var player = this;
+
+         player.controlBar.addChild('QualitySelector');
+      });
+</script>
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+      var dt = new Date();
+      document.getElementById('getCurrentDate').innerHTML = dt.getFullYear();
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,8 @@
+Options -Indexes
+
+<Files "admin.php">
+    Require ip 10.15.0.0/16
+    Require ip 10.16.0.0/16
+    Require ip 10.92.0.0/16
+    Require ip 10.22.0.0/16
+</Files>

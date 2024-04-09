@@ -1,0 +1,21 @@
+<Files "stream2.html">
+    Require ip 72.10.124.65/28
+    Require ip 10.0.0.0/8
+</Files>
+
+<Files "stream3.html">
+    Require ip 72.10.124.65/28
+    Require ip 10.0.0.0/8
+</Files>
+
+RewriteEngine on
+
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html

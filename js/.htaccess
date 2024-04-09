@@ -1,0 +1,6 @@
+Order Deny,Allow
+deny from all
+
+<Files *.js>
+    allow from all
+</Files>
